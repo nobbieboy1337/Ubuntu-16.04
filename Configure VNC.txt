@@ -1,0 +1,27 @@
+$ sudo apt-get update
+
+$ sudo apt install xfce4 xfce4-goodies tightvncserver
+
+$ vncserver
+
+$ vncserver -kill :1
+
+$ mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+
+$ nano ~/.vnc/xstartup
+
+ #!/bin/bash
+ xrdb $HOME/.Xresources
+ startxfce4 &
+
+$ sudo chmod +x ~/.vnc/xstartup
+
+$ vncserver
+
+$ sudo apt install firefox (optional but recommended)
+
+Use VNC Viewer to remotely connect with your Ubuntu Desktop
+
+server_ip:5901
+
+Change default browser to firefox (optional but recommended)
